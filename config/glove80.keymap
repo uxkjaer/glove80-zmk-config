@@ -21,7 +21,7 @@
 #define FACTORY_TEST 3
 
 
-/* To deal with the situation where there is no Lower layer, to keep &lower happy */
+/* To deal with the situation where there is no L. ower layer, to keep &lower happy */
 #ifndef LAYER_LOWER
 #define LAYER_LOWER 0
 #endif
