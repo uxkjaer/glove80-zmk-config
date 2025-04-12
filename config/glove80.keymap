@@ -51,7 +51,7 @@
             tapping-term-ms = <300>;
             quick-tap-ms = <300>;
             require-prior-idle-ms = <300>;
-            retro-tap;
+            flavor = "balanced";
         };
     };
 
