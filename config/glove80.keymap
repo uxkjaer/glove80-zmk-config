@@ -18,7 +18,8 @@
 #define DEFAULT 0
 #define LOWER 1
 #define MAGIC 2
-#define FACTORY_TEST 3
+#define CODING 3
+#define MOUSE 4
 
 / {
     behaviors {
