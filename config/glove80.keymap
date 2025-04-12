@@ -90,32 +90,6 @@
             #binding-cells = <0>;
             bindings = <&out OUT_BLE &bt BT_SEL 3>;
         };
-
-        goToLayer1: goToLayer1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp DELETE>,
-                <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(106,100,50) &mo 1>,
-                <&macro_press>,
-                <&kp>;
-
-            label = "GOTOLAYER1";
-        };
-
-        goToLayer2: goToLayer2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_SHIFT>,
-                <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(360,100,50) &mo 2>;
-
-            label = "GOTOLAYER2";
-        };
     };
 
     keymap {
