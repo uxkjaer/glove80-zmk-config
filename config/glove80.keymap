@@ -20,17 +20,32 @@
 #define MAGIC 2
 #define FACTORY_TEST 3
 
+/* To deal with the situation where there is no Lower layer, to keep &lower happy */
+#ifndef LAYER_Lower
+#define LAYER_Lower 0
+#endif
+
 / {
     behaviors {
         // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
         // Configure it as a tap dance, so the first tap (or hold) is a &mo and the second tap is a &to
-
+        
         layer_td: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "LAYER_TAP_DANCE";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
             bindings = <&mo 1>, <&to 1>;
+        };
+
+         // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
+        // Configure it as a tap dance, so the first tap (or hold) is a &mo and the second tap is a &to
+        lower: lower {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LAYER_TAP_DANCE";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mo LAYER_Lower>, <&to LAYER_Lower>;
         };
 
         magic: magic_hold_tap {
@@ -109,7 +124,7 @@
 &kp EQUAL   &kp N1       &kp N2       &kp N3       &kp N4       &kp N5                                                                                          &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
 &kp TAB     &kp Q        &kp W        &kp E        &kp R        &hm SPACE T                                                                                     &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
 &kp ESC     &kp A        &kp S        &kp D        &kp F        &hm ENTER G                                                                                     &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
-&kp GRAVE   &hm LG(Z) Z  &hm LG(X) X  &hm LG(C) C  &hm LG(V) V  &kp B        &lt 3 DELETE   &kp LCTRL         &soft_off         &kp LGUI  &kp RCTRL  &kp RSHFT  &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp PG_UP
+&kp GRAVE   &hm LG(Z) Z  &hm LG(X) X  &hm LG(C) C  &hm LG(V) V  &kp B        &lt 3 DELETE   &kp LCTRL         &lower         &kp LGUI  &kp RCTRL  &kp RSHFT  &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp PG_UP
 &magic 2 0  &kp HOME     &kp END      &kp LEFT     &kp RIGHT                 &kp BACKSPACE  &lt 1 LEFT_SHIFT  &kp LEFT_COMMAND  &kp RALT  &kp RET    &kp SPACE          &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &kp PG_DN
             >;
         };
