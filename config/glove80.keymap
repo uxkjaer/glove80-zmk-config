@@ -138,23 +138,23 @@
 
         Coding {
             bindings = <
-&trans  &trans  &trans                &trans                 &trans                                                                         &trans                &trans            &trans           &trans  &trans
-&trans  &trans  &trans                &trans                 &trans         &trans                                                  &trans  &trans                &trans            &trans           &trans  &trans
-&trans  &trans  &kp LBKT              &kp RBKT               &kp BSLH       &trans                                                  &trans  &kp LESS_THAN         &kp GREATER_THAN  &kp SLASH        &trans  &trans
-&trans  &trans  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE       &trans                                                  &trans  &hm PLUS EQUAL        &kp COLON         &kp SEMICOLON    &trans  &trans
-&trans  &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPERSAND  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &hm UNDERSCORE MINUS  &kp QUESTION      &kp EXCLAMATION  &trans  &trans
-&trans  &trans  &trans                &trans                 &trans                 &trans  &trans  &trans  &trans  &trans  &trans          &trans                &trans            &trans           &trans  &trans
+&trans  &trans  &trans                &trans                 &trans                                                                                          &trans          &trans            &trans           &trans  &trans
+&trans  &trans  &trans                &trans                 &trans         &trans                                                             &trans        &trans          &trans            &trans           &trans  &trans
+&trans  &trans  &kp LBKT              &kp RBKT               &kp BSLH       &kp GRAVE                                                          &kp ASTERISK  &kp LESS_THAN   &kp GREATER_THAN  &kp SLASH        &trans  &trans
+&trans  &trans  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE       &kp SINGLE_QUOTE                                                   &kp PLUS      &kp EQUAL       &kp COLON         &kp SEMICOLON    &trans  &trans
+&trans  &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPERSAND  &kp DOUBLE_QUOTES  &trans  &trans  &trans  &trans  &trans  &trans  &kp MINUS     &kp UNDERSCORE  &kp QUESTION      &kp EXCLAMATION  &trans  &trans
+&trans  &trans  &trans                &trans                 &trans                            &trans  &trans  &trans  &trans  &trans  &trans                &trans          &trans            &trans           &trans  &trans
             >;
         };
 
         layer_4 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                                                  &trans        &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans        &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &msc SCRL_UP  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans        &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans          &trans        &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                                                                       &trans          &trans          &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                       &trans  &trans          &trans          &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                       &trans  &none           &msc SCRL_UP    &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                       &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans  &trans          &trans          &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &mkp MB1  &mkp RCLK          &trans          &trans          &trans           &trans  &trans
             >;
         };
     };
