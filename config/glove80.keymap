@@ -155,7 +155,7 @@
             >;
         };
 
-        layer_4 {
+        Mouse {
             bindings = <
 &trans  &trans  &trans          &trans          &trans                                                                                &trans          &trans          &trans           &trans  &trans
 &trans  &trans  &trans          &trans          &trans           &trans                                                       &trans  &trans          &trans          &trans           &trans  &trans
@@ -167,12 +167,5 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        SetRGB {
-            if-layers = <1>;
-            then-layer = <1>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
